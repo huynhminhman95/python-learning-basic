@@ -23,6 +23,18 @@ list moi dua tren gia tri cua list da co
 
 """ apply function to each element """
 #[expression_1 if condition == True else expression_2 for item in iterable]
-lst = [1,2,3,4,5]
-new_lst = [x+2 if x%2 == 0 else x for x in lst]
-print(new_lst)
+# lst = [1,2,3,4,5]
+# new_lst = [x+2 if x%2 == 0 else x for x in lst]
+# print(new_lst)
+
+""" Multiple loops"""
+# nested_lst = [[i for i in range(5)] for _ in range(5)]
+# print(nested_lst)
+
+list_two = [[1,2,3], [4,5,6], [7,8,9]]
+# flatten_lst = [num for row in list_two for num in row]
+flatten_lst = []
+for row in list_two:
+   for col in row:
+      flatten_lst.append(col)
+print(f"flatten_lst: {flatten_lst}")
