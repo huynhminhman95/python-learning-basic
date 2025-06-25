@@ -1,27 +1,28 @@
 """
-Get native transactions by wallet: Lay danh sach cac giao dich goc theo vi
-use: theo doi vi, thong ke giao dich, xay dung explored rieng
+Get decoded transactions by wallet: Lay danh sach cac giao dich da giai ma theo dia chi vi
+Use: dia chi vi goi func gi, giao dich token,mint nft, gui token erc20..., xem ro cac input/output
 """
 
 import json
 from moralis_config import get_moralis_api, get_api_key, get_transaction_params
+
 # Get API instance and key
 evm_api = get_moralis_api()
 api_key = get_api_key()
 
 # Get parameters for transaction API call
 params = get_transaction_params(
-    address="0x1234567890abcdef1234567890abcdef12345678",  # Địa chỉ ví
-    chain="eth",          # Hoặc 'polygon', 'bsc', 'avalanche',...
-    limit=10              # Lấy 10 giao dịch gần nhất
+   address="0x1234567890abcdef1234567890abcdef12345678",
+   chain="eth",
+   limit=5
 )
 
-response = evm_api.transaction.get_wallet_transactions(
-    api_key=api_key,
-    params=params
+response = evm_api.transaction.get_wallet_transactions_verbose(
+   api_key=api_key,
+   params=params
 )
 
-# In ra danh sách giao dịch
+# print(response)
 for tx in response["result"]:
     print(f"Hash: {tx['hash']}")
     print(f"From: {tx['from_address']}")
