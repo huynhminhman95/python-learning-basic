@@ -3,8 +3,13 @@ Get decoded transactions by wallet: Lay danh sach cac giao dich da giai ma theo 
 Use: dia chi vi goi func gi, giao dich token,mint nft, gui token erc20..., xem ro cac input/output
 """
 
+import sys
+import os
+from turtle import clear
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
 import json
-from moralis_config import get_moralis_api, get_api_key, get_transaction_params
+from Moralis.WalletAPI.moralis_config import get_moralis_api, get_api_key, get_transaction_params
 
 # Get API instance and key
 evm_api = get_moralis_api()

@@ -41,6 +41,12 @@ def get_wallet_history_params(address: str, chain: str = "eth", order: str = "DE
         "address": address
     }
 
+def get_balances_params(chain: str = "eth") -> Any:
+    """Get parameters for wallet history API call"""
+    return {
+        "chain": chain
+    }
+
 def get_transaction_params(address: str, chain: str = "eth", limit: int = 10) -> Any:
     """Get parameters for transaction API call"""
     return {

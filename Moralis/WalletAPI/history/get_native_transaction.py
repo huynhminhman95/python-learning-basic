@@ -3,8 +3,11 @@ Get native transactions by wallet: Lay danh sach cac giao dich goc theo vi
 use: theo doi vi, thong ke giao dich, xay dung explored rieng
 """
 
-import json
-from moralis_config import get_moralis_api, get_api_key, get_transaction_params
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+from Moralis.WalletAPI.moralis_config import get_moralis_api, get_api_key, get_transaction_params
 # Get API instance and key
 evm_api = get_moralis_api()
 api_key = get_api_key()

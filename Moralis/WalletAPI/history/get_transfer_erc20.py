@@ -2,6 +2,10 @@
 Get ERC20 token transfer by wallet: lay danh sach chuyen giao token ERC20 theo dia chi vi
 """
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import json
 from moralis_config import get_moralis_api, get_api_key, get_transaction_params
 
