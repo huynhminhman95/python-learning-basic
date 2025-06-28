@@ -1,0 +1,11 @@
+_ Numpy-numerical python: la 1 thu vien manh cho tinh toan khoa hoc(scientific computing)
+va xu ly du lieu(data processing)
+_ Chi lam viec voi mang da chieu- n-dimensional arrays - giup cau truc du lieu
+nhanh hon hieu qua hon.(data structure that is faster and more efficiency than in python)
+_ Ho tro nhieu phep tinh toan, dai so tuyen tinh, phep nhan ma tran, cac ham toan hoc nang cao 
+_ 1 base de xay dung cac thu vien khac: Pandasm, Scipy and TensorFlow, Pytorch
+
+*** N-dimensional arrays ***
+_An array is a structure for storing and retrieving data - mot mang cho cau truc luu tru va truy xuat du lieu
+_ Tat ca cac thanh phan trong mang phai giong nhau ve kieu du lieu
+_ khong the thay doi
